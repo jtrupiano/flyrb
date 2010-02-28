@@ -12,7 +12,7 @@ Utility Belt is a grab-bag of tricks, tools, techniques, trifles, and toys for I
 
 == INSTALL
 
-sudo gem install utility_belt
+sudo gem install flyrb
 
 == FEATURES
 
@@ -49,7 +49,7 @@ Windows users have a couple options. The easiest is to define an environment var
 Adding Utility Belt to your .irbrc is easy:
 
   require 'rubygems'
-  require 'utility_belt'
+  require 'flyrb'
 
 To use the Amazon shortcuts, you also need to set some environment variables. See the section on S3 under "Usage" for more. Also, if your terminal has a light background, you'll need to enable the light-background syntax coloring theme - see the section on themes under "Usage" for more.
 
@@ -73,7 +73,7 @@ or
 
 If you're wondering why the method name is so ridiculously long, there's a story there:
 
-http://gilesbowkett.blogspot.com/2007/12/utility-belt-vs-rails.html
+http://gilesbowkett.blogspot.com/2007/12/flyrb-vs-rails.html
 
 == Read from and write to OS X or Windows clipboard
 
@@ -89,9 +89,9 @@ To write:
 
 == Post your code to Pastie with one command (OS X and Windows only)
 
-You must first equip the UtilityBelt with pastie in your .irbrc:
+You must first equip the Flyrb with pastie in your .irbrc:
 
-  UtilityBelt.equip(:pastie)
+  Flyrb.equip(:pastie)
   
 This line will also automatically equip the Clipboard, which is required to use pastie.
 
@@ -227,11 +227,11 @@ Note that when combined with the h! in the command history code, you basically h
 
 Utility Belt incorporates Wirble as a dependency. Wirble provides syntax coloring. Utility Belt allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:
 
-  UtilityBelt::Themes.background(:light)
+  Flyrb::Themes.background(:light)
 
 To revert back to the default, just use this:
 
-  UtilityBelt::Themes.background(:dark)
+  Flyrb::Themes.background(:dark)
 
 To specify an entirely new syntax color scheme, see the source code for this gem or for Wirble.
 

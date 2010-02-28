@@ -2,7 +2,7 @@
 # mangling.
 require 'rubygems'
 
-# Ensure that when we require UtilityBelt libs they are from the files under
+# Ensure that when we require Flyrb libs they are from the files under
 # test, NOT from the installed gem.
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), ".."))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))

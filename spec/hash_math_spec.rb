@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__), "spec_helper")
-require "lib/utility_belt/hash_math"
+require "lib/flyrb/hash_math"
 describe "Hash math" do
 
   it "should add hashes" do

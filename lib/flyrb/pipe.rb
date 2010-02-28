@@ -2,9 +2,9 @@
 #
 # Synopsis:
 #
-# >> puts "UtilityBelt is better than alfalfa" | "cowsay"
+# >> puts "Flyrb is better than alfalfa" | "cowsay"
 #  ____________________________________
-# < UtilityBelt is better than alfalfa >
+# < Flyrb is better than alfalfa >
 #  ------------------------------------
 #         \   ^__^
 #          \  (oo)\_______

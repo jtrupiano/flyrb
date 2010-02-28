@@ -3,9 +3,9 @@
 # Check that file for usage information, authorship, copyright, and extensive details. You can also find a
 # nice, HTMLified version of the README content at http://utilitybelt.rubyforge.org.
 
-UTILITY_BELT_IRB_STARTUP_PROCS = {} unless Object.const_defined? :UTILITY_BELT_IRB_STARTUP_PROCS
+FLYRB_IRB_STARTUP_PROCS = {} unless Object.const_defined? :FLYRB_IRB_STARTUP_PROCS
 
-%w{rubygems active_support utility_belt/equipper}.each {|internal_library| require internal_library}
+%w{rubygems active_support flyrb/equipper}.each {|internal_library| require internal_library}
 
 if Object.const_defined? :IRB
 
@@ -13,10 +13,10 @@ if Object.const_defined? :IRB
   # allows the user to specify which gadgets in the utility belt to equip. (Kind of pushing the
   # metaphor, but hey, what the hell.)
   IRB.conf[:IRB_RC] = Proc.new do
-    UtilityBelt.equip(:defaults) unless UtilityBelt.equipped?
-    UTILITY_BELT_IRB_STARTUP_PROCS.each {|symbol, proc| proc.call}
+    Flyrb.equip(:defaults) unless Flyrb.equipped?
+    FLYRB_IRB_STARTUP_PROCS.each {|symbol, proc| proc.call}
   end
   
   # default: dark background
-  UtilityBelt::Themes.background(:dark) if defined? UtilityBelt::Themes
+  Flyrb::Themes.background(:dark) if defined? Flyrb::Themes
 end

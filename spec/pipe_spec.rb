@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), "spec_helper")
 
 require 'spec'
 require 'irb'
-require File.join(File.dirname(__FILE__), '..', 'lib', 'utility_belt', 'pipe')
+require File.join(File.dirname(__FILE__), '..', 'lib', 'flyrb', 'pipe')
 
 describe "String#|" do
   before :each do

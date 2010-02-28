@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-%w{rubygems platform net/http utility_belt}.each {|library| require library}
+%w{rubygems platform net/http flyrb}.each {|library| require library}
 
-UtilityBelt.equip(:google)
-include UtilityBelt::Google
+Flyrb.equip(:google)
+include Flyrb::Google
 
 google(ARGV[0])

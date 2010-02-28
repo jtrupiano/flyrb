@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__), "spec_helper")
-require "lib/utility_belt/string_to_proc"
+require "lib/flyrb/string_to_proc"
 describe "String to Proc" do
 
   before(:all) do

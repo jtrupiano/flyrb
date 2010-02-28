@@ -1,7 +1,7 @@
 # S3 (http://amazon.rubyforge.org/)
 %w{aws/s3 cgi platform}.each {|lib| require lib}
 
-module UtilityBelt
+module Flyrb
   module AmazonUploadShortcut
     def aws_upload(bucket,filename)
       AWS::S3::Base.establish_connection!(:access_key_id => ENV['AMAZON_ACCESS_KEY_ID'], 
@@ -15,7 +15,7 @@ module UtilityBelt
 end
     
 class Object
-  include UtilityBelt::AmazonUploadShortcut
+  include Flyrb::AmazonUploadShortcut
 end if Object.const_defined? :IRB
 
 # a quick note: the "google" command uses CGI.escape, but the URLs produced by CGI.escape

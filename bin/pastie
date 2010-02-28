@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
-%w{rubygems utility_belt}.each {|library| require library}
+%w{rubygems flyrb}.each {|library| require library}
 
-UtilityBelt.equip(:pastie)
-include UtilityBelt::Pastie
+Flyrb.equip(:pastie)
+include Flyrb::Pastie
 
 pastie(ARGV[0])

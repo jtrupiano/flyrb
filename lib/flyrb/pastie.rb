@@ -1,8 +1,8 @@
 # automate creating pasties
-%w{platform net/http utility_belt}.each {|lib| require lib}
-UtilityBelt.equip(:clipboard)
+%w{platform net/http flyrb}.each {|lib| require lib}
+Flyrb.equip(:clipboard)
 
-module UtilityBelt
+module Flyrb
   module Pastie
     def pastie(stuff_to_paste = nil)
       stuff_to_paste ||= Clipboard.read if Clipboard.available?
@@ -30,5 +30,5 @@ module UtilityBelt
 end
 
 class Object
-  include UtilityBelt::Pastie
+  include Flyrb::Pastie
 end if Object.const_defined? :IRB

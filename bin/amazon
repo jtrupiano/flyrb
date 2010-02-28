@@ -8,9 +8,9 @@ filenames = option_parser.parse(ARGV)
 abort "Usage: amazon -b bucket_name file_name" unless @bucket && filenames
 
 # require files, populate hash
-require 'utility_belt'
-UtilityBelt.equip(:amazon_upload_shortcut)
-include UtilityBelt::AmazonUploadShortcut
+require 'flyrb'
+Flyrb.equip(:amazon_upload_shortcut)
+include Flyrb::AmazonUploadShortcut
 
 # baddabing, baddaboom
 filenames.each {|filename| puts aws_upload(@bucket, filename)}

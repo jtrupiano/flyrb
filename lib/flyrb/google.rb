@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 %w{rubygems platform cgi}.each {|library| require library}
 
-UtilityBelt.equip(:clipboard)
+Flyrb.equip(:clipboard)
 
-module UtilityBelt
+module Flyrb
   module Google
     def google(search_term = nil)
       search_term ||= Clipboard.read if Clipboard.available?
@@ -29,5 +29,5 @@ module UtilityBelt
 end
 
 class Object
-  include UtilityBelt::Google
+  include Flyrb::Google
 end if Object.const_defined? :IRB

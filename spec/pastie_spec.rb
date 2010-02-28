@@ -5,10 +5,10 @@ require 'spec'
 Platform = Module.new unless Object.const_defined?('Platform')
 Net = Module.new unless Object.const_defined?('Net')
 
-require File.expand_path(File.join(File.dirname(__FILE__),'..','lib/utility_belt'))
-UtilityBelt.equip(:pastie)
-include UtilityBelt::Pastie
-Clipboard = UtilityBelt::Clipboard unless Object.const_defined?('Clipboard')
+require File.expand_path(File.join(File.dirname(__FILE__),'..','lib/flyrb'))
+Flyrb.equip(:pastie)
+include Flyrb::Pastie
+Clipboard = Flyrb::Clipboard unless Object.const_defined?('Clipboard')
 
 describe "pastie being called" do
 

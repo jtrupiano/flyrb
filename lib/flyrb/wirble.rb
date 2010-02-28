@@ -2,14 +2,14 @@ require 'wirble'
 Wirble.init
 Wirble.colorize
 
-module UtilityBelt
+module Flyrb
   module Themes
     def self.background(bkg)
       case bkg
       when :dark
-        Wirble::Colorize.colors = UtilityBelt::Themes::WIRBLE_DEFAULT_THEME
+        Wirble::Colorize.colors = Flyrb::Themes::WIRBLE_DEFAULT_THEME
       when :light
-        Wirble::Colorize.colors = UtilityBelt::Themes::THEME_FOR_WHITE_BKG
+        Wirble::Colorize.colors = Flyrb::Themes::THEME_FOR_WHITE_BKG
       end
     end
     WIRBLE_DEFAULT_THEME = {

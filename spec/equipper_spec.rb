@@ -1,8 +1,8 @@
 require File.join(File.dirname(__FILE__), "spec_helper")
-require 'lib/utility_belt/equipper'
+require 'lib/flyrb/equipper'
 
 # Mocks for the gadgets
-UTILITY_BELT_IRB_STARTUP_PROCS = {}
+FLYRB_IRB_STARTUP_PROCS = {}
 
 module IRB
   def self.conf
@@ -10,10 +10,10 @@ module IRB
   end
 end
 
-describe "UtilityBelt equipper" do
+describe "Flyrb equipper" do
 
-  ALL_GADGETS = UtilityBelt::Equipper::GADGETS
-  DEFAULT_GADGETS = UtilityBelt::Equipper::DEFAULTS
+  ALL_GADGETS = Flyrb::Equipper::GADGETS
+  DEFAULT_GADGETS = Flyrb::Equipper::DEFAULTS
 
   before(:all) do
     # I know, global variables are bad, but I can't get this to work otherwise
@@ -34,37 +34,37 @@ describe "UtilityBelt equipper" do
   end
 
   it "should load all gadgets" do
-    UtilityBelt.equip(:all)
+    Flyrb.equip(:all)
     $required_libs.should == ALL_GADGETS
   end
 
   it "should load no gadgets" do
-    UtilityBelt.equip(:none)
+    Flyrb.equip(:none)
     $required_libs.should == []
   end
 
   it "should load all default gadegts" do
-    UtilityBelt.equip(:defaults)
+    Flyrb.equip(:defaults)
     $required_libs.should == DEFAULT_GADGETS
   end
 
   it "should load all gadgets except is_an" do
-    UtilityBelt.equip(:all, :except => ['is_an'])
+    Flyrb.equip(:all, :except => ['is_an'])
     $required_libs.should == ALL_GADGETS - ['is_an']
   end
 
   it "should load no gadgets except is_an" do
-    UtilityBelt.equip(:none, :except => ['is_an'])
+    Flyrb.equip(:none, :except => ['is_an'])
     $required_libs.should == ['is_an']
   end
 
   it "should accept a string for the except-param" do
-    UtilityBelt.equip(:none, :except => 'is_an')
+    Flyrb.equip(:none, :except => 'is_an')
     $required_libs.should == ['is_an']
   end
 
   it "should accept a symbol for the except-param" do
-    UtilityBelt.equip(:none, :except => :is_an)
+    Flyrb.equip(:none, :except => :is_an)
     $required_libs.should == ['is_an']
   end
 end

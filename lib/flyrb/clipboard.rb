@@ -4,7 +4,7 @@
 # Extended to handle windows and linux as well
 require 'platform'
 
-module UtilityBelt
+module Flyrb
   class Clipboard
     
     def self.available?
@@ -49,4 +49,4 @@ module UtilityBelt
   end
 end
 
-Clipboard = UtilityBelt::Clipboard if Object.const_defined? :IRB
+Clipboard = Flyrb::Clipboard if Object.const_defined? :IRB

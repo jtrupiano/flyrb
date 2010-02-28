@@ -2,7 +2,7 @@
 #
 # Author: Markus Prinz <markus.prinz@qsig.org>
 
-module UtilityBelt
+module Flyrb
   class << self
     def equip(*args)
       Equipper.equip(*args)
@@ -59,7 +59,7 @@ module UtilityBelt
           end
         end
 
-        gadgets_to_equip.each{|gadget| require "utility_belt/#{gadget}" }
+        gadgets_to_equip.each{|gadget| require "flyrb/#{gadget}" }
 
         @equipped ||= true
       end

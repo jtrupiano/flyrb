@@ -41,7 +41,7 @@
 			<p>Adding Utility Belt to your .irbrc is easy:</p>
 
 <pre>require 'rubygems'
-require 'utility_belt'</pre>
+require 'flyrb'</pre>
 
 			<p>To use the Amazon shortcuts, you also need to set some environment variables. See the section on S3 under "Usage" for more. Also, if your terminal has a light background, you'll need to enable the light-background syntax coloring theme - see the section on themes under "Usage" for more.</p>
 
@@ -63,7 +63,7 @@ require 'utility_belt'</pre>
 
 <pre>edit_interactively("/the/path/to/my/editor")</pre>
 
-			<p>If you're wondering why the method name is so ridiculously long, <a href="http://gilesbowkett.blogspot.com/2007/12/utility-belt-vs-rails.html" title="Giles Bowkett: Utility Belt vs. Rails">there's a story there</a>.</p>
+			<p>If you're wondering why the method name is so ridiculously long, <a href="http://gilesbowkett.blogspot.com/2007/12/flyrb-vs-rails.html" title="Giles Bowkett: Utility Belt vs. Rails">there's a story there</a>.</p>
 
 			<h4>Read from and write to OS X or Windows clipboard</h4>
 
@@ -77,9 +77,9 @@ require 'utility_belt'</pre>
 
 			<h4>Post your code to Pastie with one command (OS X and Windows only)</h4>
 
-      <p>You must first equip the UtilityBelt with pastie in your .irbrc:</p>
+      <p>You must first equip the Flyrb with pastie in your .irbrc:</p>
       
-<pre>UtilityBelt.equip(:pastie)</pre>
+<pre>Flyrb.equip(:pastie)</pre>
 
       <p>This line will also automatically equip the Clipboard, which is required to use pastie.</p>
 
@@ -216,11 +216,11 @@ alias b2="amazon --bucket my_other_bucket $1"</pre>
 
 			<p>Utility Belt incorporates <a href="http://pablotron.org/software/wirble/" title="Pablotron: Wirble">Wirble</a> as a dependency. Wirble provides syntax coloring. Utility Belt allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:</p>
 
-<pre>UtilityBelt::Themes.background(:light)</pre>
+<pre>Flyrb::Themes.background(:light)</pre>
 
 			<p>To revert back to the default, just use this:</p>
 
-<pre>UtilityBelt::Themes.background(:dark)</pre>
+<pre>Flyrb::Themes.background(:dark)</pre>
 
 <p>To specify an entirely new syntax color scheme, see the source code for this gem or for Wirble.</p>
 

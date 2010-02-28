@@ -1,5 +1,5 @@
 require File.join(File.dirname(__FILE__), "spec_helper")
-require "lib/utility_belt/array_numberings"
+require "lib/flyrb/array_numberings"
 describe "Array Numberings" do
 	
 	before do
