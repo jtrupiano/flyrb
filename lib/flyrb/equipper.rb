@@ -54,8 +54,12 @@ module Flyrb
           args.each do |arg|
             gadget = arg.to_s
 
-            # Silently ignore unkown gadgets
-            gadgets_to_equip << gadget if GADGETS.include? gadget
+            if GADGETS.include? gadget
+              gadgets_to_equip << gadget
+            else
+              # Don't silently ignore unkown gadgets
+              puts "Failed to find gadget #{gadget}, ignoring"
+            end
           end
         end
 
