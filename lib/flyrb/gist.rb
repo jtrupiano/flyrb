@@ -45,3 +45,7 @@ module Flyrb
       end
   end
 end
+
+class Object
+  include Flyrb::Gist
+end if Object.const_defined? :IRB
