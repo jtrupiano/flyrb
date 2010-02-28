@@ -20,6 +20,6 @@ end if Object.const_defined? :IRB
 
 # a quick note: the "google" command uses CGI.escape, but the URLs produced by CGI.escape
 # don't seem to succeed here, in practice. this may differ by OS and/or browser. Let me
-# know if you see something weird -- the Utility Belt mailing list is here:
+# know if you see something weird -- the Flyrb mailing list is here:
 #
 # http://rubyforge.org/mailman/listinfo/utilitybelt-tinkering

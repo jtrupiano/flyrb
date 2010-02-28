@@ -7,13 +7,13 @@
   <meta name="keywords" content="ruby, giles bowkett, batman, utility belt, gem, attack of the killer tomatoes" />
   <meta name="author" content="Giles Bowkett / Original design: Andreas Viklund - http://andreasviklund.com/" />
   <link rel="stylesheet" type="text/css" href="andreas00.css" media="screen,projection" />
-  <title>Utility Belt: Usage</title>
+  <title>Flyrb: Usage</title>
 </head>
 
 <body>
   <div id="wrap">
     <div id="header">
-      <h1><a href="http://utilitybelt.rubyforge.org">Utility Belt</a></h1>
+      <h1><a href="http://utilitybelt.rubyforge.org">Flyrb</a></h1>
       <p><strong>IRB tools, tricks, and techniques</strong></p>
     </div>
 
@@ -34,11 +34,11 @@
 
 			<h3>SYNOPSIS</h3>
 
-			<p>Utility Belt gives you a ton of new options and techniques in IRB. (You may find yourself putting its language patches in actual projects as well.) The way to use Utility Belt is to edit, or create, your .irbrc file. This is analogous to a Unix .bashrc, .tcshrc, .profile, or similar file.</p>
+			<p>Flyrb gives you a ton of new options and techniques in IRB. (You may find yourself putting its language patches in actual projects as well.) The way to use Flyrb is to edit, or create, your .irbrc file. This is analogous to a Unix .bashrc, .tcshrc, .profile, or similar file.</p>
 
 			<p>Windows users have a couple options. The easiest is to define an environment variable called IRBRC and set it to the full path of your irbrc (e.g. "C:\Documents and Settings\<username>\_irbrc"). Presto, .irbrc for Windows. You could also set your HOME-Variable to any directory you want and put your ".irbrc" in there. (It needs to be called ".irbrc", "_irbrc" won't work). Since Windows Explorer won't let you create a file with a dot in the beginning, use any text editor (Notepad will do just fine) and "Save As" to save it as ".irbrc". (The quotation marks make the magic happen.) We don't recommend this if you're also using MSYS or Cygwin, as they use the same variable for their own purposes.</p>
 
-			<p>Adding Utility Belt to your .irbrc is easy:</p>
+			<p>Adding Flyrb to your .irbrc is easy:</p>
 
 <pre>require 'rubygems'
 require 'flyrb'</pre>
@@ -47,7 +47,7 @@ require 'flyrb'</pre>
 
 			<h3>USAGE</h3>
 
-			<p>Using each of Utility Belt's tools is different:</p>
+			<p>Using each of Flyrb's tools is different:</p>
 
 			<h4>Interactively edit IRB code in your preferred text editor</h4>
 
@@ -63,7 +63,7 @@ require 'flyrb'</pre>
 
 <pre>edit_interactively("/the/path/to/my/editor")</pre>
 
-			<p>If you're wondering why the method name is so ridiculously long, <a href="http://gilesbowkett.blogspot.com/2007/12/flyrb-vs-rails.html" title="Giles Bowkett: Utility Belt vs. Rails">there's a story there</a>.</p>
+			<p>If you're wondering why the method name is so ridiculously long, <a href="http://gilesbowkett.blogspot.com/2007/12/flyrb-vs-rails.html" title="Giles Bowkett: Flyrb vs. Rails">there's a story there</a>.</p>
 
 			<h4>Read from and write to OS X or Windows clipboard</h4>
 
@@ -161,7 +161,7 @@ end</pre>
 
       <h4>Command-line Amazon S3 upload script</h4>
 
-<p>Utility Belt also includes <code>amazon</code>, a simple command-line uploader for S3. It requires that you set your Amazon environment variables (see above). The usage is:</p>
+<p>Flyrb also includes <code>amazon</code>, a simple command-line uploader for S3. It requires that you set your Amazon environment variables (see above). The usage is:</p>
 
 <pre>amazon -b my_bucket_name filename other_filename</pre>
 
@@ -214,7 +214,7 @@ alias b2="amazon --bucket my_other_bucket $1"</pre>
 
 			<h4>Extremely basic themes for Wirble syntax coloring</h4>
 
-			<p>Utility Belt incorporates <a href="http://pablotron.org/software/wirble/" title="Pablotron: Wirble">Wirble</a> as a dependency. Wirble provides syntax coloring. Utility Belt allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:</p>
+			<p>Flyrb incorporates <a href="http://pablotron.org/software/wirble/" title="Pablotron: Wirble">Wirble</a> as a dependency. Wirble provides syntax coloring. Flyrb allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:</p>
 
 <pre>Flyrb::Themes.background(:light)</pre>
 
