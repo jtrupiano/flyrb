@@ -1,12 +1,18 @@
-== Utility Belt
+== Flyrb
 
-by Giles Bowkett (and many others)
+previously utility_belt by Giles Bowkett (and many others): http://utilitybelt.rubyforge.org
 
-http://utilitybelt.rubyforge.org
+== Why Hijack The Project?
+
+Giles isn't maintaining it anymore and it didn't work with Ruby 1.9.  Since I depend on the library quite a bit, I've decided to maintain a fork myself and others.
+
+== Why Rename It?
+
+Well Giles owns the namespace on Gemcutter and various other folks are maintaining their own forks.  I think it'll be less confusing to simply leave utility_belt in 1.8 land and move forward with Flyrb in 1.9.
 
 == DESCRIPTION
   
-Utility Belt is a grab-bag of tricks, tools, techniques, trifles, and toys for IRB, including convenience methods, language patches, and useful extensions. It also includes a couple command-line widgets. Its primary inspirations were an awesome gem called Wirble and a blog post by Amy Hoy called "Secrets Of The Rails Console Ninjas".
+Flyrb is a grab-bag of tricks, tools, techniques, trifles, and toys for IRB, including convenience methods, language patches, and useful extensions. It also includes a couple command-line widgets. Its primary inspirations were an awesome gem called Wirble and a blog post by Amy Hoy called "Secrets Of The Rails Console Ninjas".
 
 (http://slash7.com/articles/2006/12/21/secrets-of-the-rails-console-ninjas)
 
@@ -42,11 +48,11 @@ The majority of this code was written by other people and compiled, nicked, nabb
 
 == SYNOPSIS
 
-Utility Belt gives you a ton of new options and techniques in IRB. (You may find yourself putting its language patches in actual projects as well.) The way to use Utility Belt is to edit, or create, your .irbrc file. This is analogous to a Unix .bashrc, .tcshrc, .profile, or similar file.
+Flyrb gives you a ton of new options and techniques in IRB. (You may find yourself putting its language patches in actual projects as well.) The way to use Flyrb is to edit, or create, your .irbrc file. This is analogous to a Unix .bashrc, .tcshrc, .profile, or similar file.
 
 Windows users have a couple options. The easiest is to define an environment variable called IRBRC and set it to the full path of your irbrc (e.g. "C:\Documents and Settings\<username>\_irbrc"). Presto, .irbrc for Windows. You could also set your HOME-Variable to any directory you want and put your ".irbrc" in there. (It needs to be called ".irbrc", "_irbrc" won't work). Since Windows Explorer won't let you create a file with a dot in the beginning, use any text editor (Notepad will do just fine) and "Save As" to save it as ".irbrc". (The quotation marks make the magic happen.) We don't recommend this if you're also using MSYS or Cygwin, as they use the same variable for their own purposes.
 
-Adding Utility Belt to your .irbrc is easy:
+Adding Flyrb to your .irbrc is easy:
 
   require 'rubygems'
   require 'flyrb'
@@ -55,7 +61,7 @@ To use the Amazon shortcuts, you also need to set some environment variables. Se
 
 == USAGE
 
-Using each of Utility Belt's tools is different:
+Using each of Flyrb's tools is different:
 
 == Interactively edit IRB code in your preferred text editor
 
@@ -172,7 +178,7 @@ A good way to use this is actually to have a default bucket, and create a furthe
 
 == Command-line Amazon S3 upload script
 
-Utility Belt also includes amazon, a simple command-line uploader for S3. It requires that you set your Amazon environment variables (see above). The usage is:
+Flyrb also includes amazon, a simple command-line uploader for S3. It requires that you set your Amazon environment variables (see above). The usage is:
 
   amazon -b my_bucket_name filename other_filename
 
@@ -225,7 +231,7 @@ Note that when combined with the h! in the command history code, you basically h
 
 == Extremely basic themes for Wirble syntax coloring
 
-Utility Belt incorporates Wirble as a dependency. Wirble provides syntax coloring. Utility Belt allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:
+Flyrb incorporates Wirble as a dependency. Wirble provides syntax coloring. Flyrb allows you to choose between two syntax coloring themes: Wirble's default, and an alternate color set for terminals with light backgrounds. The default theme is enabled by default (duh), but if you have a terminal with a light background, you can enable the light-background theme just by putting the following line of code in your .irbrc:
 
   Flyrb::Themes.background(:light)
 
