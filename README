@@ -4,7 +4,7 @@ previously utility_belt by Giles Bowkett (and many others): http://utilitybelt.r
 
 == Why Hijack The Project?
 
-Giles isn't maintaining it anymore and it didn't work with Ruby 1.9.  Since I depend on the library quite a bit, I've decided to maintain a fork myself and others.
+Giles isn't maintaining it anymore and it didn't work with Ruby 1.9.  Since I depend on the library quite a bit, I've decided to maintain a fork for myself and others.
 
 == Why Rename It?
 
