@@ -44,12 +44,12 @@ class String
           rightSection = expr.match(/[+\-*\/%&|\^\.=<>!]\s*$/m)
           if leftSection || rightSection then
               if (leftSection) then
-                  params.push('$left')
-                  expr = '$left' + expr
+                  params.push('left')
+                  expr = 'left' + expr
               end
               if (rightSection) then
-                  params.push('$right')
-                  expr = expr + '$right'
+                  params.push('right')
+                  expr = expr + 'right'
               end
           else
               self.gsub(
