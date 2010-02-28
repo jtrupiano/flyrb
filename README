@@ -106,7 +106,9 @@ First copy come code into your clipboard, or put it there with the Clipboard.wri
 
   gist
   
-Note that this method currently also sets the gist filename to flyrb.rb.  Support for other filenames or languages is possible but not implemented yet.  Also, this code is OS X and Windows only because it uses the Clipboard.
+Note that this method currently also sets the gist filename to fly.rb which triggers Ruby syntax highlighting in your gist.  The optional second argument to gist is a filename which GitHub will interpret for syntax highlighting.
+
+  gist 'PS1=\[\033[0;36m\]\w\[\033[0;33m\]$(parse_git_branch)\[\033[0;36m\] $> \[\033[0;37m\]', ".profile"
 
 == Post your code to Pastie with one command (OS X and Windows only)
 

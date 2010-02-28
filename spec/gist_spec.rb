@@ -71,7 +71,7 @@ describe "gist being called" do
       Clipboard.should_receive(:read).and_return('bar')
       Net::HTTP.should_receive(:post_form).with(anything(), {
         :"file_ext[gistfile1]" => "rb",
-        :"file_name[gistfile1]" => "flyrb",
+        :"file_name[gistfile1]" => "fly.rb",
         :"file_contents[gistfile1]" => 'bar'
       }).and_return(@page)
       gist
@@ -88,11 +88,23 @@ describe "gist being called" do
     it "should pass in the parameter instead" do
       Net::HTTP.should_receive(:post_form).with(anything(), {
         :"file_ext[gistfile1]" => "rb",
-        :"file_name[gistfile1]" => "flyrb",
+        :"file_name[gistfile1]" => "fly.rb",
         :"file_contents[gistfile1]" => 'baz',
       }).and_return(@page)
       
       gist "baz"
+    end
+  end
+  
+  describe "with a parameter and a filename" do
+    it "should set the filename" do
+      Net::HTTP.should_receive(:post_form).with(anything(), {
+        :"file_ext[gistfile1]" => "rb",
+        :"file_name[gistfile1]" => "lisp.el",
+        :"file_contents[gistfile1]" => 'foo',
+      }).and_return(@page)
+      
+      gist "foo", "lisp.el"
     end
   end
 end

@@ -8,7 +8,7 @@ module Flyrb
   module Gist
     def gist(content = nil, filename = nil)
       content  ||= Clipboard.read if Clipboard.available?
-      filename ||= "flyrb"
+      filename ||= "fly.rb"
 
       url = URI.parse('http://gist.github.com/gists')
       req = Net::HTTP.post_form(url, data(filename, "rb", content))
@@ -29,10 +29,10 @@ module Flyrb
         end
       end
       
-      def data(name, ext, content)
+      def data(filename, ext, content)
         {
           :'file_ext[gistfile1]'      => ext,
-          :'file_name[gistfile1]'     => name,
+          :'file_name[gistfile1]'     => filename,
           :'file_contents[gistfile1]' => content
         }.merge(auth)
       end
