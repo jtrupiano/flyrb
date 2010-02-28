@@ -15,6 +15,7 @@ module Flyrb
     GADGETS = Dir[File.join(File.dirname(__FILE__), '*.rb')].map{|file| File.basename(file)[0..-4]}.reject{|gadget| "equipper" == gadget }
 
     DEFAULTS = %w{wirble
+                  gist
                   hash_math
                   interactive_editor
                   irb_options
