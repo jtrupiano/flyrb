@@ -6,3 +6,6 @@ require 'rubygems'
 # test, NOT from the installed gem.
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), ".."))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "..", "lib"))
+
+gem 'rspec'
+require 'spec'
