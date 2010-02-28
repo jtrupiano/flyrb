@@ -18,7 +18,7 @@ describe "Flyrb equipper" do
   before(:all) do
     # I know, global variables are bad, but I can't get this to work otherwise
     Kernel.__send__(:alias_method, :old_require, :require)
-    Kernel.__send__(:define_method, :require, proc {|library| $required_libs << library[13..-1] })
+    Kernel.__send__(:define_method, :require, proc {|library| $required_libs << library[6..-1] })
   end
 
   before(:each) do
