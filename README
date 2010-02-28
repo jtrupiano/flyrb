@@ -8,7 +8,7 @@ Giles isn't maintaining it anymore and it didn't work with Ruby 1.9.  Since I de
 
 == Why Rename It?
 
-Well Giles owns the namespace on Gemcutter and various other folks are maintaining their own forks.  I think it'll be less confusing to simply leave utility_belt in 1.8 land and move forward with Flyrb in 1.9.
+Well Giles owns the namespace on Gemcutter and various other folks are maintaining their own forks.  I think it'll be less confusing to simply leave utility_belt in 1.8 land and move forward with flyrb in 1.9.
 
 == DESCRIPTION
   
@@ -79,7 +79,7 @@ or
 
 If you're wondering why the method name is so ridiculously long, there's a story there:
 
-http://gilesbowkett.blogspot.com/2007/12/flyrb-vs-rails.html
+http://gilesbowkett.blogspot.com/2007/12/utility-belt-vs-rails.html
 
 == Read from and write to OS X or Windows clipboard
 
