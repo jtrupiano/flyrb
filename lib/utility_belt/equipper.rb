@@ -36,7 +36,7 @@ module UtilityBelt
             exceptions = args[1].has_key?(:except) ? args[1][:except] : []
 
             # Handle special case where we get a string or a symbol instead of an array
-            exceptions = exceptions.to_s.to_a unless exceptions.is_a?( Array )
+            exceptions = Array(exceptions.to_s) unless exceptions.is_a?( Array )
           else
             exceptions = []
           end
