@@ -24,6 +24,7 @@ sudo gem install flyrb
 
 * Interactively edit IRB code in your preferred text editor
 * Read from and write to OS X clipboard
+* Gist your code with one command
 * Post your code to Pastie with one command (OS X only)
 * Kick-ass Unix-style history buffer
 * Write command history to file or vi
@@ -93,9 +94,23 @@ To write:
 
   Clipboard.write("something")
 
+== Gist your code
+
+You must first equip Flyrb with gist in your .irbrc:
+
+  Flyrb.equip(:gist)
+  
+This line will also automatically equip the Clipboard, which is required to use gist.
+
+First copy come code into your clipboard, or put it there with the Clipboard.write() class method.  Then use the command:
+
+  gist
+  
+Note that this method currently also sets the gist filename to flyrb.rb.  Support for other filenames or languages is possible but not implemented yet.  Also, this code is OS X and Windows only because it uses the Clipboard.
+
 == Post your code to Pastie with one command (OS X and Windows only)
 
-You must first equip the Flyrb with pastie in your .irbrc:
+You must first equip Flyrb with pastie in your .irbrc:
 
   Flyrb.equip(:pastie)
   
@@ -327,7 +342,8 @@ Because life is too short to type whole words.
 
   (The MIT License)
 
-  Copyright (c) 2006-2007 Giles Bowkett
+  Copyright (c) 2010 John Trupiano
+  Portions Copyright (c) 2006-2007 Giles Bowkett
   Portions Copyright (c) 2006-2007 Ben Bleything
   Portions Copyright (c) 2006-2007 Reginald Braithwaite
   Portions Copyright (c) 2006-2007 Gregory Brown
