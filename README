@@ -18,7 +18,7 @@ Flyrb is a grab-bag of tricks, tools, techniques, trifles, and toys for IRB, inc
 
 == INSTALL
 
-sudo gem install flyrb
+gem install flyrb --pre
 
 == FEATURES
 
