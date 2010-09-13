@@ -1,6 +1,6 @@
 Gem::Specification.new do |s| 
   s.name = "flyrb"
-  s.version = "1.0.0.b"
+  s.version = "1.0.0.c"
   s.author = "John Trupiano"
   s.email = "jtrupiano@gmail.com"
   s.homepage = "http://github.com/jtrupiano/flyrb"
