@@ -6,23 +6,34 @@ require 'platform'
 
 module Flyrb
   class Clipboard
-    
+
     def self.available?
       @@implemented || false
     end
-    
+
     case Platform::IMPL
+    when :linux
+
+      def self.read
+        IO.popen('xclip -selection -clipboard -o') {|clipboard| clipboard.read}
+      end
+
+      def self.write(contents)
+        IO.popen('xclip -selection -clipboard', 'w') {|clipboard| clipboard.write(contents)}
+      end
+
+      @@implemented = true
     when :macosx
 
       def self.read
         IO.popen('pbpaste') {|clipboard| clipboard.read}
       end
 
-      def self.write(stuff)
-        IO.popen('pbcopy', 'w+') {|clipboard| clipboard.write(stuff)}
+      def self.write(contents)
+        IO.popen('pbcopy', 'w+') {|clipboard| clipboard.write(contents)}
       end
       @@implemented = true
-  
+
     when :mswin
 
       begin
@@ -41,11 +52,11 @@ module Flyrb
       rescue LoadError
         raise "You need the win32-clipboard gem for clipboard functionality!"
       end
-  
+
     else
       raise "No suitable clipboard implementation for your platform found!"
     end
-    
+
   end
 end
 
